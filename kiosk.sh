@@ -23,7 +23,7 @@ fi
 git pull
 
 # Adjust this URL to display a webpage
-url="https://airbridge.net.au"
+url=$(head -n 1 config.txt)
 
 # Open chromium with specified URL in Kiosk Mode
 screen -dmS abwd bash -c "DISPLAY=:0 chromium-browser --kiosk $url"
